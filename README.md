@@ -1,6 +1,9 @@
 # Barracuda Inference PoseNet Demo
 A simple Unity project demonstrating how to perform 2D human pose estimation with the barracuda-inference-posenet package. 
 
+## Demo Video
+https://user-images.githubusercontent.com/9126128/232156999-217ed86b-6496-4f31-8c54-5fc60e68e3cd.mp4
+
 
 
 ## Getting Started
