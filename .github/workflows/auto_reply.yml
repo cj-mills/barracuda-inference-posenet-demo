@@ -12,4 +12,3 @@ jobs:
       uses: cj-mills/auto-reply-workflow/auto-reply@main
       with:
         issue-comment: 'Your custom comment message (optional)'
-        token: ${{ secrets.GITHUB_TOKEN }}
