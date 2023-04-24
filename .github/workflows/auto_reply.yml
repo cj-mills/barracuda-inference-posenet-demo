@@ -10,5 +10,5 @@ jobs:
     steps:
     - name: Auto-reply to new issues
       uses: cj-mills/auto-reply-workflow/auto-reply@main
-      with:
-        issue-comment: 'Your custom comment message (optional)'
+#       with:
+#         issue-comment: 'Your custom comment message (optional)'
