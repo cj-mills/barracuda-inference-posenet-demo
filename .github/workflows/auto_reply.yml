@@ -1,0 +1,12 @@
+name: Auto-reply to new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto_reply:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Post auto-reply comment
+      uses: {YourGitHubUsername}/auto-reply-workflow@main
