@@ -1,0 +1,21 @@
+name: Auto-reply to new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  auto_reply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post auto-reply comment
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const issueComment = `Thank you for creating an issue! I typically address new issues on Thursdays. I'll get back to you as soon as I can. :clock1:`;
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: issueComment,
+            });
