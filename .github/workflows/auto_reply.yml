@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Auto-reply to new issues
-      uses: cj-mills/auto-reply-workflow/auto-reply@main
+      uses: cj-mills/auto-reply-workflow@main
 #       with:
 #         issue-comment: 'Your custom comment message (optional)'
