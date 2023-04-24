@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Post auto-reply comment
-      uses: {YourGitHubUsername}/auto-reply-workflow@main
+      uses: cj-mills/auto-reply-workflow@main
