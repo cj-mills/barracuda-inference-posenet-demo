@@ -8,14 +8,8 @@ jobs:
   auto_reply:
     runs-on: ubuntu-latest
     steps:
-    - name: Post auto-reply comment
-      uses: actions/github-script@v5
+    - name: Auto-reply to new issues
+      uses: cj-mills/shared-github-actions/auto-reply@main
       with:
-        script: |
-          const issueComment = `Thank you for creating an issue! I typically address new issues on Thursdays. I'll get back to you as soon as I can. :clock1:`;
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: issueComment,
-          });
+        issue-comment: 'Your custom comment message (optional)'
+        token: ${{ secrets.GITHUB_TOKEN }}
