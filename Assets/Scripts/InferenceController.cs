@@ -76,10 +76,10 @@ public class InferenceController : MonoBehaviour
         modelRunner.ExecuteModel(inputTexture);
         RenderTexture.ReleaseTemporary(inputTexture);
 
-        // Process the model outptu
+        // Process the model output
         humanPoses = modelRunner.ProcessOutput(scoreThreshold, nmsRadius, maxPoses, useMultiPoseDecoding);
 
-        // Update bounding boxes and user interface
+        // Update poses and user interface
         UpdateHumanPoses(inputDims);
         uiController.UpdateUI(humanPoses.Length);
         humanPose2DVisualizer.UpdatePoseVisualizations(humanPoses, confidenceThreshold);
